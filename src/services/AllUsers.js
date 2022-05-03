@@ -3,7 +3,7 @@ import axios from "axios";
 export const allUsers = async () => {
 
     try{
-        const res = await axios.get("/api/users/all");
+        const res = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/users/all`);
 
         return res.data
     } catch (error) {
@@ -15,7 +15,7 @@ export const allUsers = async () => {
 export const usersQuery = async (query) => {
 
     try{
-        const res = await axios.get(`/api/users/all/${query}`);
+        const res = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/users/all/${query}`);
 
         return res.data
     } catch (error) {
