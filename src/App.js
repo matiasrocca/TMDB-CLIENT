@@ -13,6 +13,9 @@ import { persistence } from "./services/Persistencia";
 import axios from "axios";
 
 const App = () => {
+  if (process.env.NODE_ENV === "production"){
+    axios.defaults.withCredentials = true;
+  }
     const {user, setUser} = useContext(UserContext)
     const [indice, setIndice] = useState(0)
     const [isLoading, setLoading] = useState(true);
@@ -24,9 +27,6 @@ const App = () => {
         .then(() => setLoading(false))
       }, []);
 
-    if (process.env.NODE_ENV === "production"){
-      axios.defaults.withCredentials = true;
-    }
     
 
     return (
