@@ -10,6 +10,7 @@ import PerfilAjeno from "./components/PerfilAjeno";
 import { UserContext } from "./index";
 import { useContext, useEffect, useState } from "react";
 import { persistence } from "./services/Persistencia";
+import axios from "axios";
 
 const App = () => {
     const {user, setUser} = useContext(UserContext)
@@ -22,6 +23,11 @@ const App = () => {
         .then(resultadoUsuario => setUser(resultadoUsuario))
         .then(() => setLoading(false))
       }, []);
+
+    if (process.env.NODE_ENV === "production"){
+      axios.defaults.withCredentials = true;
+    }
+    
 
     return (
       <>
