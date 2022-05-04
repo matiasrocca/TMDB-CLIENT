@@ -14,12 +14,6 @@ import axios from "axios";
 
 const App = () => {
 
-  if (process.env.NODE_ENV === "production"){
-    axios.defaults.withCredentials = true;
-  }else{
-    process.env.REACT_APP_SERVER_URL= "http://localhost:3001"
-  }
-
     const {user, setUser} = useContext(UserContext)
     const [indice, setIndice] = useState(0)
     const [isLoading, setLoading] = useState(true);
