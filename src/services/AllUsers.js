@@ -27,7 +27,7 @@ export const usersQuery = async (query) => {
 export const userSpecific = async (id) => {
 
     try{
-        const res = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/users/:${id}`);
+        const res = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/users/${id}`);
 
         return res.data;
     } catch (error) {
