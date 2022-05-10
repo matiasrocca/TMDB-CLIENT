@@ -29,8 +29,8 @@ body {
 
 .primerSeccion{
   border-radius: 10px;
-  -webkit-box-shadow:inset 0px 0px 250px 50px #000000;
-  box-shadow:inset 0px 0px 100px 50px #000000;
+  -webkit-box-shadow:inset 0px 0px 250px 60px #000000;
+  box-shadow:inset 0px 0px 250px 60px #000000;
   background-image: url('./utils/fondoInicio.jpeg');
   padding: 10%;
 }
