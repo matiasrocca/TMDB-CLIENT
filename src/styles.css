@@ -12,6 +12,9 @@ body {
   font-family: 'Martel', serif;
 }
 
+#slide{
+  width: 30%;
+}
 
 .swiper-slide {
   background-position: center;
@@ -21,6 +24,11 @@ body {
 }
 
 @media (max-width: 768px) {
+
+  #slide{
+    width: 100%;
+  }
+
   .swiper-slide {
     width: 250px;
     height: auto;

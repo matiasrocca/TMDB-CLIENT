@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import "../../node_modules/swiper/swiper.min.css";
+//import "../../node_modules/swiper/swiper.min.css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -20,7 +20,7 @@ export default function ImageList({categoria, queBuscamos}) {
                     navigation={true}
                     effect={"coverflow"}
                     centeredSlides={true}
-                    slidesPerView={window.innerWidth < 768 ? 1 : "auto"}
+                    slidesPerView={"auto"}
                     loop={true}
                     coverflowEffect={{
                     rotate: 50,
@@ -36,7 +36,7 @@ export default function ImageList({categoria, queBuscamos}) {
                 >
                     {categoria.map((pelicula,id) =>{
                         return(
-                            <SwiperSlide key={id} style={{"width":"30%", "borderRadius": "5px"}}>
+                            <SwiperSlide key={id} id="slide" >
                               <Link to = {`/find/${queBuscamos}/${pelicula.id}`}>
                                 <img src={`https://image.tmdb.org/t/p/original${pelicula.poster_path}`} />                              
                               </Link>

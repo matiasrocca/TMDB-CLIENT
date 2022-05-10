@@ -61,9 +61,11 @@ const Specific = () => {
             <div className="main" style={{"backgroundImage": `url("https://image.tmdb.org/t/p/original${ specific.backdrop_path}")`, "backgroundPosition": 'center',"backgroundSize": 'cover', "backgroundRepeat": 'no-repeat', "backgroundAttachment": "fixed"}}>
                 <section className="section is-medium" style={{"paddingTop": "12rem", "paddingBottom":"3rem"}}>
                     <div className="componenteSpecific" style={{"padding":"5% 5% 5% 5%", "backgroundColor":"rgba(0, 0, 0, 0.508)", "borderRadius":"5px"}}>
+                        {window.innerWidth >= 768 && (
                         <div style={{"maxWidth":"30%", "minWidth":"30%" }}>
                             <img style ={{"borderRadius": "5px"}} src={`https://image.tmdb.org/t/p/original${specific.poster_path}`} alt="Placeholder image"/>
                         </div>
+                        )}
                         <div className="informacionSpecific">
                             <div>
                                 <h1 className="titulos">{specific.title || specific.original_name}</h1>

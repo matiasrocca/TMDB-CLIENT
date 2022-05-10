@@ -20,7 +20,7 @@ export default function Recomendadas({recomendadas}) {
   return (
     <>
       <Swiper
-        slidesPerView={5}
+        slidesPerView={window.innerWidth <= 760 ? 3 : 5}
         spaceBetween={30}
         freeMode={true}
         modules={[FreeMode]}
