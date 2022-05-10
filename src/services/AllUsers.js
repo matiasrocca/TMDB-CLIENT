@@ -4,7 +4,7 @@ export const allUsers = async () => {
     console.log(process.env.REACT_APP_SERVER_URL)
 
     try{
-        const res = await axios.get(`${process.env.REACT_APP_SERVER_URL}api/users/all`);
+        const res = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/users/all`);
 
         return res.data
     } catch (error) {
@@ -16,7 +16,7 @@ export const allUsers = async () => {
 export const usersQuery = async (query) => {
 
     try{
-        const res = await axios.get(`${process.env.REACT_APP_SERVER_URL}api/users/all/${query}`, {withCredentials:true});
+        const res = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/users/all/${query}`, {withCredentials:true});
 
         return res.data
     } catch (error) {
