@@ -20,7 +20,7 @@ const PerfilAjeno = () => {
             userSpecific(id),
             favoritosUsuario(id)
         ]).then(results => {
-            setBusqueda(results[0]),
+            setBusqueda(results[0])
             setFavoritos(results[1])
         }).then(()=>setLoading(false))
 
