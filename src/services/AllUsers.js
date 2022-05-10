@@ -1,6 +1,7 @@
 import axios from "axios";
 
 export const allUsers = async () => {
+    console.log(process.env.REACT_APP_SERVER_URL)
 
     try{
         const res = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/users/all`);
