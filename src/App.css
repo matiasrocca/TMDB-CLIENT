@@ -603,4 +603,23 @@ a:visited
   input ::-webkit-input-placeholder{
     color: #fff;
   }
+
+
+  .envolverLogin{
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px; 
+    margin-left: -40%;
+    padding: 20, 20, 20, 20;
+  }
+  #inputs_login{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login{
+    width: 100%;
+  }
+
 }
