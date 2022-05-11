@@ -4,8 +4,6 @@ export const persistence = async () => {
 
     let user;
 
-    console.log(localStorage.getItem("user"))
-
     try{
         if(localStorage.getItem("user")){
             user = JSON.parse(localStorage.getItem("user"))

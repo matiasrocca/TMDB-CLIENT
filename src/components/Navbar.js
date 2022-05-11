@@ -24,8 +24,6 @@ const Navbar = ({setIndice}) => {
         navigate("/")
     }
 
-    console.log(user)
-
     return (
 
         <nav className="navbar" style={{"position":"fixed", "width":"100%", "boxShadow":"0px 5px 20px 0px rgb(201, 200, 255)","backgroundColor":"black"}}>

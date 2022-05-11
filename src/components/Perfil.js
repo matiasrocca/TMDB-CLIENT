@@ -1,16 +1,18 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import Card from "./Card"
 import {favoritosUsuario } from "../services/FavoritosUsuario"
+import { UserContext } from ".."
+
 
 const Perfil = () => {
     const [isLoading, setLoading] = useState(true);
     const [favoritas, setFavoritas] = useState([])
-    const id = localStorage.getItem("id")
+    const { user } = useContext(UserContext)
 
     useEffect(()=>{
 
-        favoritosUsuario(id).then(results => setFavoritas(results)).then(()=>setLoading(false))
+        favoritosUsuario(user.id).then(results => setFavoritas(results)).then(()=>setLoading(false))
 
     },[])
 
