@@ -29,7 +29,7 @@ const Perfil = () => {
                 </div>
             ) : 
             (
-        <div className="main" style={((!favoritas[0]) || (favoritas.length <= 4)) ?({"height":"100vh","overflow":"hidden"}):({"height":"100%"})}>
+        <div className="main" style={window.innerWidth < 760?({"height":"100%"}):( ((!favoritas[0]) || (favoritas.length <= 4)) ?({"height":"100vh","overflow":"hidden"}):({"height":"100%"}))}>
         <section className="section is-large" style={{"padding": "14rem 3rem 3rem 3rem"}}>
             <div className="envolverPerfil">
                 <h1 className="titulos">Tus películas Favoritas</h1>
