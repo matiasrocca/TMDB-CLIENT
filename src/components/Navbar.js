@@ -21,8 +21,6 @@ const Navbar = ({setIndice}) => {
     const handleClick = () =>{
         logout()
         setUser("")
-        localStorage.removeItem("user");
-        localStorage.removeItem("id");
         navigate("/")
     }
 
@@ -72,7 +70,7 @@ const Navbar = ({setIndice}) => {
             <div className="navbar-item" >
                 {user ? (
                     <div className="field is-grouped" style={{"flexDirection":"column"}}>
-                        <h2 id = "textoBienvenida" >Bienvenido {user.usuario}!</h2>
+                        <h2 id = "textoBienvenida" >Bienvenido {user.username}!</h2>
                         <div style={{"display":"flex","justifyContent":"center"}}>
                             <Link to={"perfil"}>
                             <button className= "botones">Perfil</button>
@@ -92,57 +90,6 @@ const Navbar = ({setIndice}) => {
       </nav>
 
     )
-
-    /*
-    return (
-        <nav id = "navId" >
-            <div className = "inicio">
-                <div className="brand">
-                    <Link to= "/">
-                        <img className="logo" src={imagen} alt="logo"></img>
-                    </Link>
-                </div>
-            </div>
-            
-            <div className="center">
-                <h1 className= "texto">
-                    De Pelicula
-                </h1>
-                <form id = "busqueda" onSubmit={handleSubmit}>
-                    <div className="caja">
-                        <input {...search} className="buscar" type="text" placeholder="Search..."/>
-                    </div>
-                </form>
-
-            </div>
-
-            <div className="end">
-                {user.id ? (
-                    <>
-                    <div className="bienvenida">
-                        <h2 id = "textoBienvenida" >Bienvenido {user.usuario}!</h2>
-                        <div className="contenedorBotones" >
-                                <Link to={"perfil"}>
-                                    <button className= "botones">Perfil</button>
-                                </Link>
-                                <button className= "botones" onClick={handleClick}>Log Out</button>
-                        </div>
-                    </div>
-                    </>   
-                    ):(
-                    <div>
-                            <Link to = "login">
-                                <button className= "botones" ><strong>LOGIN</strong></button>
-                            </Link>
-                            <Link to = "register">
-                                <button className= "botones" ><strong>REGISTER</strong></button>
-                            </Link>
-                    </div>
-                    )}
-            </div>
-        </nav>   
-    )
-    */
 }
 
 export default Navbar
