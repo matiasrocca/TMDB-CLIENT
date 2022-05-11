@@ -8,7 +8,7 @@ export const persistence = async () => {
 
     try{
         if(localStorage.getItem("user")){
-            user = localStorage.getItem("user")
+            user = JSON.parse(localStorage.getItem("user"))
         }else{
             user = null
         }

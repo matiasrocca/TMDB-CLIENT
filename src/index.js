@@ -13,7 +13,7 @@ export const UserContext = createContext();
 export const TypeContext = createContext();
 
 const Index = () => {
-  const [user, setUser] = useState("")
+  const [user, setUser] = useState(null)
   const [type, setType] = useState("movie")
 
   return (
