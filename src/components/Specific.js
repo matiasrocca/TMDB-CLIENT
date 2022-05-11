@@ -44,6 +44,9 @@ const Specific = () => {
         setFav(!fav)
     }
 
+    console.log(user)
+    console.log(process.env.REACT_APP_KEY)
+
     return (
         <>
         {isLoading?

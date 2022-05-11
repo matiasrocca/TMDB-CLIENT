@@ -24,6 +24,8 @@ const Navbar = ({setIndice}) => {
         navigate("/")
     }
 
+    console.log(user)
+
     return (
 
         <nav className="navbar" style={{"position":"fixed", "width":"100%", "boxShadow":"0px 5px 20px 0px rgb(201, 200, 255)","backgroundColor":"black"}}>
@@ -70,7 +72,7 @@ const Navbar = ({setIndice}) => {
             <div className="navbar-item" >
                 {user ? (
                     <div className="field is-grouped" style={{"flexDirection":"column"}}>
-                        <h2 id = "textoBienvenida" >Bienvenido {user.username}!</h2>
+                        <h2 id = "textoBienvenida" >Bienvenido {user.user}!</h2>
                         <div style={{"display":"flex","justifyContent":"center"}}>
                             <Link to={"perfil"}>
                             <button className= "botones">Perfil</button>
