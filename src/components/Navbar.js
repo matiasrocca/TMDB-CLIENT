@@ -70,7 +70,7 @@ const Navbar = ({setIndice}) => {
           
           <div className="navbar-end">
             <div className="navbar-item" >
-                {user ? (
+                {user.id ? (
                     <div className="field is-grouped" style={{"flexDirection":"column"}}>
                         <h2 id = "textoBienvenida" >Bienvenido {user.user}!</h2>
                         <div style={{"display":"flex","justifyContent":"center"}}>
