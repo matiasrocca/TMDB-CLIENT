@@ -104,7 +104,7 @@ const Main = (props) => {
                                     De Pelicula
                                 </h1>
                                 <h2 className="textoEncabezado">
-                                Que gusto tenerte de vuelta! Ya sabés como funcionanuestra pagina, elegís la categoría y encontrás las series o películas que más te gusten, podés agregalas a favoritos. Conocé la lista de favoritos de otros usuarios.
+                                ¡Que gusto tenerte de vuelta! Ya sabés como funciona nuestra página, elegís la categoría y encontrás las series o películas que más te gusten, podés agregalas a favoritos. Conocé la lista de favoritos de otros usuarios.
                                 </h2>
                                 <br/>
                                 <Link to={"perfil"}>
