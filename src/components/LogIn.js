@@ -17,8 +17,7 @@ const LogIn = (props) => {
         if (!respuesta.success){
             alert(respuesta.message)
         } else{
-            localStorage.setItem("user", respuesta.user.usuario.toUpperCase())
-            localStorage.setItem("id", respuesta.user.id)
+            localStorage.setItem("user", JSON.stringify(respuesta.user))
             setUser(respuesta.user)
             props.setTrigger(0)
         }
