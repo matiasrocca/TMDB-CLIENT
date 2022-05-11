@@ -73,14 +73,14 @@ const Navbar = ({setIndice}) => {
                         <h2 id = "textoBienvenida" >Bienvenido {user.usuario}!</h2>
                         <div style={{"display":"flex","justifyContent":"center"}}>
                             <Link to={"perfil"}>
-                            <button className= "botones">Perfil</button>
+                            <button className= "botones">PERFIL</button>
                             </Link>
-                            <button className= "botones" onClick={handleClick}>Log Out</button>
+                            <button className= "botones" onClick={handleClick}>LOG OUT</button>
                         </div>
                     </div>
                     ):(
                     <div className="field is-grouped">
-                        <button onClick={()=> setIndice(1)} className= "botones" >LOGIN</button>
+                        <button onClick={()=> setIndice(1)} className= "botones" >LOG IN</button>
                         <button onClick={()=> setIndice(2)} className= "botones" >REGISTER</button>
                     </div>
                 )}

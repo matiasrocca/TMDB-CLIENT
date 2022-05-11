@@ -35,7 +35,7 @@ const LogIn = (props) => {
                             <CancelPresentationIcon style={{"alignSelf":"flex-end", "marginTop":"10px", "marginRight":"10px" }} onClick={()=>props.setTrigger(0)}/>
                         <div className="toPad">
                             <div style={{"display":"flex", "justifyContent":"center"}}>
-                                <h1 className="titulos">LOGIN</h1>
+                                <h1 className="titulos">LOG IN</h1>
                             </div>
                             <br/>
                             <form onSubmit={handleSubmit}>
@@ -45,7 +45,7 @@ const LogIn = (props) => {
                                 </div>
                                 <br/>
                                 <div id="botonLogin">
-                                    <button className="botonLogin" type="submit">Login</button>
+                                    <button className="botonLogin" type="submit">Log in</button>
                                 </div>
                             </form>
                         </div>
